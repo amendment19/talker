@@ -1,0 +1,24 @@
+
+{% load staticfiles %}
+<!doctype html>
+<html>
+<head>
+<title>Talker</title>
+<link rel="stylesheet" href="{% static 'css/style.css' %}" />
+<script>
+  var help = new Audio();
+  help.src="../static/audio/help.m4a";
+
+  var come = new Audio();
+  come.src="../static/audio/come.m4a";
+</script>
+</head>
+<body>
+<h1>Talker</h1>
+<p>Click the picture to hear a word.</p>
+<p>
+  <a href="#" onmousedown="help.play()"><img src="{% static 'images/help.jpg' %}" alt="help" height="400"/></a>
+  <a href="#" onmousedown="come.play()"><img src="{% static 'images/come.jpg' %}" alt="come" height="400"/></a>
+</p>
+</body>
+</html>
