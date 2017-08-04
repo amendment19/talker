@@ -17,8 +17,12 @@
 <h1>Talker</h1>
 <p>Click the picture to hear a word.</p>
 <p>
-  <a href="#" onmousedown="help.play()"><img src="{% static 'images/help.jpg' %}" alt="help" height="400"/></a>
-  <a href="#" onmousedown="come.play()"><img src="{% static 'images/come.jpg' %}" alt="come" height="400"/></a>
+  <!--<a href="#" onmousedown="help.play()"><img src="{% static 'images/help.jpg' %}" alt="help" height="400"/></a>-->
+  <!--<a href="#" onmousedown="come.play()"><img src="{% static 'images/come.jpg' %}" alt="come" height="400"/></a>-->
+  {% for img in images %}
+    <a href="#" onmousedown={{img.click}}> <img src=" {% static img.source%}" height="300px" /></a>
+  {% endfor %}
+
 </p>
 </body>
 </html>

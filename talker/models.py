@@ -6,3 +6,4 @@ class Audio(models.Model):
 
 class Images(models.Model):
     image_file = models.CharField(max_length=30)
+    
