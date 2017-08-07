@@ -15,9 +15,12 @@
 <p>
   <!--<a href="#" onmousedown="help.play()"><img src="{% static 'images/help.jpg' %}" alt="help" height="400"/></a>-->
   <!--<a href="#" onmousedown="come.play()"><img src="{% static 'images/come.jpg' %}" alt="come" height="400"/></a>-->
+  <table><tr>
   {% for img in images %}
-    <a href="#" onmousedown={{img.click}}> <img src=" {% static img.source%}" height="300px" /></a>
+    <td><a href="#" onmousedown={{img.click}}> <img src=" {% static img.source%}" height="300px" /></a></td>
   {% endfor %}
+  </tr>
+  </table>
 
 </p>
 </body>
