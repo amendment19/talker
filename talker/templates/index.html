@@ -17,7 +17,7 @@
   <!--<a href="#" onmousedown="come.play()"><img src="{% static 'images/come.jpg' %}" alt="come" height="400"/></a>-->
   <table><tr>
   {% for img in images %}
-    <td><a href="#" onmousedown={{img.click}}> <img src=" {% static img.source%}" height="300px" /></a></td>
+    <td><a href="javascript:void(0)" onmousedown={{img.click}}> <img src=" {% static img.source%}" height="50%" /></a></td>
   {% endfor %}
   </tr>
   </table>
